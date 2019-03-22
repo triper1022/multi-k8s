@@ -14,7 +14,7 @@ after_success:
   - docker build -t marco1022/multi-server ./server
   - docker build -t marco1022/multi-worker ./worker
 
-  - echo"$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin 
+  - ECHO "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin 
 
   - docker push marco1022/multi-client
   - docker push marco1022/multi-nginx
