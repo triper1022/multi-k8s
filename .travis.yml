@@ -20,3 +20,16 @@ after_success:
   - docker push marco1022/multi-nginx
   - docker push marco1022/multi-server
   - docker push marco1022/multi-worker
+
+deploy:
+  provider: elasticbeanstalker
+  region: ap-northeast-1
+  app: multi-docker
+  env: MultiDocker-env
+  bucket_name: elasticbeanstalk-ap-northeast-1-654842437587
+  bucket_path: docker-multi
+  on:
+    branch: master
+  access_key_id: $AWS_Access_key
+  secret_access_key:
+    secure: #AWS_Secret_access_key
