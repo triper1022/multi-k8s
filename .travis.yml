@@ -22,7 +22,7 @@ after_success:
   - docker push marco1022/multi-worker
 
 deploy:
-  provider: elasticbeanstalker
+  provider: elasticbeanstalk
   region: ap-northeast-1
   app: multi-docker
   env: MultiDocker-env
