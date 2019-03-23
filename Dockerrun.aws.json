@@ -14,14 +14,14 @@
       "hostname": "api",
       "essential": false,
       "memory": 128
-    }
+    },
     {
       "name": "worker",
       "image": "marco1022/multi-worker",
       "hostname": "worker",
       "essential": false,
       "memory": 128 
-    }
+    },
     {
       "name": "nginx",
       "image": "marco1022/multi-nginx",
