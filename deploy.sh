@@ -11,6 +11,6 @@ docker push marco1022/multi-server:$SHA
 docker push marco1022/multi-worker:$SHA
 
 kubectl apply -f k8s
-kubuctl set image deployments/server-deployment server=marco1022/multi-server:$SHA
-kubuctl set image deployments/client-deployment client=marco1022/multi-client:$SHA
-kubuctl set image deployments/worker-deployment worker=marco1022/multi-worker:$SHA
+kubectl set image deployments/server-deployment server=marco1022/multi-server:$SHA
+kubectl set image deployments/client-deployment client=marco1022/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=marco1022/multi-worker:$SHA
