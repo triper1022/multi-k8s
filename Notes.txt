@@ -1,0 +1,9 @@
+helm wasn't available for me so I had to rerun the ./get_helm.sh script and then it started working.
+
+Will this always happen with a new session?
+
+Stephen Grider
+Stephen ¡X Instructor ¡P 6 months ago
+Hi Daniel-
+
+It will happen if the VM running your google cloud shell gets restarted for some reason.  This is generally uncommon, I have not yet determined why or how it sometimes gets restarted.
