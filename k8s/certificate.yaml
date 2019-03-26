@@ -1,0 +1,20 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: loveyodayuuki-com-tls
+spec:
+  secretName: loveyodayuuki-com
+  issuerRef: 
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: loveyodayuuki.com
+  dnsNames:
+    - loveyodayuuki.com
+    - www.loveyodayuuki.com
+  acme:
+    config:
+      - http01:
+          ingressClass:nginx
+        domains:
+          - loveyodayuuki.com
+          - www.loveyodayuuki.com
